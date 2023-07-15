@@ -1,0 +1,65 @@
+find all articles that mention Apple published today, and sort them by most popular source first (i.e. Engadget articles will be returned ahead of Mom and Pop's Little iPhone Blog). For this we need to use the /everything endpoint.
+https://newsapi.org/v2/everything?q=Apple&from=2023-07-14&sortBy=popularity&apiKey=API_KEY
+
+The identifier for BBC News is bbc-news, which we can get by querying the sources endpoint.
+https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=API_KEY
+
+
+{
+"status": "ok",
+"totalResults": 36,
+-"articles": [
+-{
+-"source": {
+"id": "cnn",
+"name": "CNN"
+},
+"author": "Eric Zerkel",
+"title": "A weeks-long heat wave will intensify this weekend and push temperatures close to 130 degrees - CNN",
+"description": "An already dangerous weeks-long heat wave will only worsen this weekend as a heat dome intensifies and reaches peak strength over parts of the Western United States.",
+"url": "https://www.cnn.com/2023/07/14/weather/heat-wave-phoenix-california-las-vegas-climate/index.html",
+"urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/230713135826-01-heatwave-texas-071123.jpg?c=16x9&q=w_800,c_fill",
+"publishedAt": "2023-07-14T10:00:00Z",
+"content": "An already dangerous weeks-long heat wave will only worsen this weekend as a heat dome intensifies and reaches peak strength over parts of the Western United States.\r\nAround 100 million people are un… [+3699 chars]"
+}
+]
+}
+
+
+
+
+{
+  "status": "ok",
+  "totalResults": 10,
+  -"articles": [
+  -{
+  -"source": {
+  "id": "bbc-news",
+  "name": "BBC News"
+  },
+  "author": "BBC News",
+  "title": "Chandrayaan-3: India's historic Moon mission lifts off successfully",
+  "description": "With Chandrayaan-3, India aims to be the first to land near the Moon's little-explored south pole.",
+  "url": "http://www.bbc.co.uk/news/world-asia-india-66185565",
+  "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9C52/production/_130381004_whatsappimage2023-07-14at2.47.10pm.jpg",
+  "publishedAt": "2023-07-14T10:52:24.3371764Z",
+  "content": "Media caption, Watch: The moment India launched historic Moon mission\r\nIndia has launched its third Moon mission, aiming to be the first to land near its little-explored south pole.\r\nThe Chandrayaan-… [+5513 chars]"
+  },
+  -{
+  -"source": {
+  "id": "bbc-news",
+  "name": "BBC News"
+  },
+  "author": "BBC News",
+  "title": "Who is Fran Drescher, the sitcom star taking on Hollywood?",
+  "description": "A former star of US sitcoms, Fran Drescher is the union chief leading actors into battle with streamers.",
+  "url": "http://www.bbc.co.uk/news/world-us-canada-66200190",
+  "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3FBE/production/_130381361_gettyimages-1540887355.jpg",
+  "publishedAt": "2023-07-14T10:52:22.2908092Z",
+  "content": "Media caption, Watch: Actress Fran Drescher: 'Shame on them'\r\nWhen we picture the fire-and-brimstone types that often lead unions into battle against corporate giants, they rarely have much in the wa… [+5390 chars]"
+  },
+  ]
+  }
+
+
+  https://newsapi.org/v2/top-headlines?country=in&apiKey=3b047c5ff9054a849383310ef2c80f8c
