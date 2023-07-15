@@ -24,7 +24,7 @@ export default class News extends Component {
   }
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3b047c5ff9054a849383310ef2c80f8c&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=55f5d6c62f0446dfa37656e57b81e855&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -33,14 +33,27 @@ export default class News extends Component {
       totalResults: parsedData.totalResults,
       loading: false,
     });
+    // this.updateNews();
   }
+
+  // updateNews = async () => {
+  //   const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=55f5d6c62f0446dfa37656e57b81e855&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+  //   this.setState({ loading: true });
+  //   let data = await fetch(url);
+  //   let parsedData = await data.json();
+  //   this.setState({
+  //     articles: parsedData.articles,
+  //     totalResults: parsedData.totalResults,
+  //     loading: false,
+  //   });
+  // };
 
   handlePrevClick = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
     }&category=${
       this.props.category
-    }&apiKey=3b047c5ff9054a849383310ef2c80f8c&page=${
+    }&apiKey=55f5d6c62f0446dfa37656e57b81e855&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -51,6 +64,8 @@ export default class News extends Component {
       articles: parsedData.articles,
       loading: false,
     });
+    // this.setState({ page: this.state.page - 1 });
+    // this.updateNews();
   };
 
   handleNextClick = async () => {
@@ -64,7 +79,7 @@ export default class News extends Component {
         this.props.country
       }&category=${
         this.props.category
-      }&apiKey=3b047c5ff9054a849383310ef2c80f8c&page=${
+      }&apiKey=55f5d6c62f0446dfa37656e57b81e855&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
@@ -76,12 +91,14 @@ export default class News extends Component {
         loading: false,
       });
     }
+    // this.setState({ page: this.state.page + 1 });
+    // this.updateNews();
   };
 
   render() {
     return (
       <div className="container">
-        {console.log(this.state.articles)}
+        {console.log(this.state.articles.length)}
         <h3 className="display-5">NewsMonkey - Top Headlines</h3>
         {this.state.loading && <Spinner />}
         <div className="row">
@@ -102,7 +119,7 @@ export default class News extends Component {
                         : "https://c.ndtvimg.com/2023-07/uiq3hd88_hollywood-strikeafp-_625x300_14_July_23.jpg"
                     }
                     url={element.url}
-                    source={element.source}
+                    source={element.source.name}
                     date={element.publishedAt}
                     author={element.author}
                   />

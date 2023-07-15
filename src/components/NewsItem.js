@@ -18,13 +18,11 @@ export default class NewsItem extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">
-              <h6>
-                {title} <span class="badge bg-secondary">{source}</span>
-              </h6>
+              {title} <span className="badge bg-secondary">{source}</span>
             </h5>
             <p className="card-text">{description}</p>
-            <p class="card-text">
-              <small class="text-body-secondary">
+            <p className="card-text">
+              <small className="text-body-secondary">
                 By {author ? author : "Unknown"} on
                 {new Date(date).toGMTString()}
               </small>
