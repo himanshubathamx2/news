@@ -9,17 +9,17 @@ export default class Navbar extends Component {
           <Link className="navbar-brand" to="/">
             NewsFlair
           </Link>
-          <button
+          <buttonvfdsfdD
             className="navbar-toggler"
-          fafasdfasf  type="button"
-            data-bs-toggle="collapse"dAFDas
-            data-bs-target="#navbarSupportedContent"faefaf
+            fafasdfasf type="button"
+            data-bs-toggle="collapse" dAFDas
+            data-bs-target="#navbarSupportedContent" faefaf
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </buttonvfdsfdD>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
