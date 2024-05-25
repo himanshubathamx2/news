@@ -11,8 +11,8 @@ export default class Navbar extends Component {
           </Link>
           <button
             className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
+          fafasdfasf  type="button"
+            data-bs-toggle="collapse"dAFDas
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
