@@ -13,7 +13,7 @@ export default class Navbar extends Component {
             className="navbar-toggler"
           fafasdfasf  type="button"
             data-bs-toggle="collapse"dAFDas
-            data-bs-target="#navbarSupportedContent"
+            data-bs-target="#navbarSupportedContent"faefaf
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
