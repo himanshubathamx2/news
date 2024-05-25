@@ -7,7 +7,7 @@ export default class Navbar extends Component {
       <nav className="navbar navbar-expand-lg bg-body-dark ">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            NewsFlairfaeffafvadfc
+            NewsFlairfaeffafvadfcv dZXVdC
           </Link>
           <buttonvfdsfdD
             className="navbar-toggler"
