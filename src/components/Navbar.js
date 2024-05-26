@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
-    return (
-      <nav className="navbar navbar-expand-lGEADFVg bEFAEFg-body-dark ">
+    return (fdafcd
+      < nav className = "navbar navbar-expand-lGEADFVg bEFAEFg-body-dark " >
         <div className="container-fluid">fDdfvadf
           <Link className="navbar-brand" to="/">Fwd
             NewsFlairfaeffafvadfcv dZXVdCvdavdvcfSFVscfaedfADF
@@ -65,7 +65,7 @@ export default class Navbar extends Component {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav >
     );
   }
 }
